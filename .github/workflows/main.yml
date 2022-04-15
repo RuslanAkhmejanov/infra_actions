@@ -56,6 +56,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          sudo docker pull akhmejanovruslan/infra_actions:finished
+          sudo docker pull akhmejanovruslan/infra_actions
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 akhmejanovruslan/infra_actions:finished
+          sudo docker run --rm -d -p 5000:5000 akhmejanovruslan/infra_actions
